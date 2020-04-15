@@ -1,7 +1,7 @@
 ---
 title: Introduction to distance sampling
 author: Centre for Research into Ecological and Environmental Modelling  **University of St Andrews**
-subtitle: Workshop, 17-28 February 2020
+subtitle: Workshop, 04-15 May 2020
 date: Exercise 5. Point transect sampling
 output: 
   html_document:
@@ -26,7 +26,7 @@ The aim of this practical are to:
 
 # Simulated survey data
 
-Simulated point transect data from 30 points are given in the data set `PTExercise`. These data were generated from a half-normal detection function and the true density was 79.8 animals/hectare \footnote{1 hectare=0.01km$^2$}. The radial distances were recorded in metres. 
+Simulated point transect data from 30 points are given in the data set `PTExercise`. These data were generated from a half-normal detection function and the true density was 79.8 animals/hectare *Note*: 1 hectare=0.01km$^2$. The radial distances were recorded in metres. 
 
 Load the data, check it is OK and plot the distribution of radial distances. 
 
@@ -83,7 +83,6 @@ For each method the same 32 point transects were used in 33.2 ha of parkland (Fi
 ```{r montrave, echo=FALSE, fig.cap="The study site: the dotted line is a small stream, the short dashed lines are tracks and the thick dashed line is a main road. The 32 points, shown by crosses, are laid out on a systematic grid with 100m separation. The diagonal lines were used for a line transect survey.", out.width = '50%'}
 knitr::include_graphics("https://workshops.distancesampling.org/standrews-2019/intro/practicals/figures/Prac_5_Figure_1.png")
 ```
-
 
 Data for these methods are available in the `Distance` package. This is convenient because each data set can be accessed as follows:
 

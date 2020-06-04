@@ -1,7 +1,7 @@
 ---
 title: Introduction to distance sampling
 author: Centre for Research into Ecological and Environmental Modelling  **University of St Andrews**
-subtitle: Workshop, 04-15 May 2020
+subtitle: Workshop, 06-17 July 2020
 date: Exercise 5. Point transect sampling 
 output: 
   html_document:
@@ -93,11 +93,11 @@ plot(PTExercise.hr.t20m, main="Hazard rate, truncation 20m", pdf=TRUE)
 plot(PTExercise.uf.cos.t20m, main="Uniform with cosine, truncation 20m", pdf=TRUE)
 ```
 
-We see a fair degree of variability between analyses - reliable analysis of point transect data is more difficult than for line transect data. We see greater loss in precision from truncating data relative to line transect sampling, but if we don't truncate data, different models can give widely differing estimates.
+We see a fair degree of variability between analyses - reliable analysis of point transect data is more difficult than for line transect data. We see greater loss in precision from truncating data relative to line transect sampling, but if we do not truncate data, different models can give widely differing estimates.
 
 # Wren data (Optional)
 
-In the code provided below, each dataset is loaded and then detection functions that we selected are fitted. 
+In the code provided below, each data set is loaded and then detection functions that we selected are fitted. 
 
 ```{r, echo=T, eval=T}
 # Wren data for Method 1 (5 min counts)

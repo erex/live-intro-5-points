@@ -1,7 +1,7 @@
 ---
 title: Introduction to distance sampling
 author: Centre for Research into Ecological and Environmental Modelling  **University of St Andrews**
-subtitle: Workshop, 04-15 May 2020
+subtitle: Workshop, 06-17 July 2020
 date: Exercise 5. Point transect sampling
 output: 
   html_document:
@@ -22,7 +22,7 @@ The purpose of this exercise is to analyse point transect survey data: it can so
 The aim of this practical are to:
 
 1. Practice fitting detection functions to point transect survey data. 
-2. Use data available in the `Distance` package. 
+2. Use data from the `Distance` package. 
 
 # Simulated survey data
 
@@ -66,8 +66,8 @@ plot(ptdat.hn, pdf=TRUE)
 
 Experiment with keys other than the half normal (i.e. hazard rate and uniform) to assess whether these data can be satisfactorily analysed using the wrong model: 
 
-+ determine a suitable truncation distance, and 
-+ for each key function decide whether any adjustments are needed.
+- determine a suitable truncation distance, and 
+- for each key function decide whether any adjustments are needed.
 
 How do the bias and precision compare between models? 
 

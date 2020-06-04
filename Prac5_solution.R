@@ -1,8 +1,8 @@
-## ----setup, include=FALSE-------------------------------------------------------
+## ----setup, include=FALSE------------------------------------------------------------
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 
-## ---- fig.width=4, fig.height=4, message=FALSE----------------------------------
+## ---- fig.width=4, fig.height=4, message=FALSE---------------------------------------
 library(Distance)
 # Read in data
 data("PTExercise")
@@ -27,7 +27,7 @@ PTExercise.uf.cos.t20m <- ds(data=PTExercise, transect="point", key="unif",
                         adjustment="cos", truncation=20,convert.units=conversion.factor)
 
 
-## ---- echo=F--------------------------------------------------------------------
+## ---- echo=F-------------------------------------------------------------------------
 # Same caveat as with previous exercises, do not get excited
 #   about the code in this chunk; it is not necessary for your 
 #   understanding of distance sampling.
@@ -53,7 +53,7 @@ pt.tab[4,4:8] <- get.results.f(PTExercise.uf.cos.t20m)
 knitr::kable(pt.tab, caption="Results from simulated point transect data.", digits=3)
 
 
-## ---- echo=FALSE, eval=FALSE----------------------------------------------------
+## ---- echo=FALSE, eval=FALSE---------------------------------------------------------
 ## # Plot detection functions
 ## par(mfrow=c(2,2))
 ## plot(PTExercise.hn, main="Half normal, no truncation")
@@ -62,7 +62,7 @@ knitr::kable(pt.tab, caption="Results from simulated point transect data.", digi
 ## plot(PTExercise.uf.cos.t20m, main="Uniform with cosine, truncation 20m")
 
 
-## -------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------
 # Plot probability density functions
 par(mfrow=c(2,2))
 plot(PTExercise.hn, main="Half normal, no truncation", pdf=TRUE)
@@ -71,7 +71,7 @@ plot(PTExercise.hr.t20m, main="Hazard rate, truncation 20m", pdf=TRUE)
 plot(PTExercise.uf.cos.t20m, main="Uniform with cosine, truncation 20m", pdf=TRUE)
 
 
-## ---- echo=T, eval=T------------------------------------------------------------
+## ---- echo=T, eval=T-----------------------------------------------------------------
 # Wren data for Method 1 (5 min counts)
 data("wren_5min")
 # Wren data for Method 2 (snapshot)
@@ -87,7 +87,7 @@ wrensnap.hr.cos.t110 <- ds(data=wren_snapshot, key="hr", adjustment=NULL,
                         convert.units=conversion.factor)
 
 
-## ---- echo=F--------------------------------------------------------------------
+## ---- echo=F-------------------------------------------------------------------------
 # Harvest results
 n <- 2
 wren.tab <- data.frame(Method=1:n, Density=rep(NA,n), 
@@ -105,7 +105,7 @@ wren.tab[2,2:4] <- get.results.f(wrensnap.hr.cos.t110)
 knitr::kable(wren.tab, caption="Winter wren density estimates from 5 minute counts and snapshot moment.", digits=3)
 
 
-## ---- fig.height=4--------------------------------------------------------------
+## ---- fig.height=4-------------------------------------------------------------------
 # Plot detection functions
 par(mfrow=c(1,2))
 plot(wren5min.uf.cos.t110, main="5 minute count")

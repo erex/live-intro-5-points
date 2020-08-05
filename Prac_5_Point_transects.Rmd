@@ -1,14 +1,10 @@
 ---
 title: Introduction to distance sampling
-author: Centre for Research into Ecological and Environmental Modelling  **University of St Andrews**
-subtitle: Workshop, 06-17 July 2020
-date: Exercise 5. Point transect sampling
+author: Centre for Research into Ecological and Environmental Modelling <br> **University of St Andrews**
+date: Exercise 5. Point transect sampling <br> September 2020
 output: 
-  html_document:
-    number_sections: yes
-    theme: flatly
+  rmdformats::readthedown:
     highlight: tango
-    df_print: kable
 ---
 
 ```{r setup, include=FALSE, message=FALSE}
@@ -40,10 +36,11 @@ head(PTExercise)
 hist(PTExercise$distance)
 ```
 
+# Fit and plot half normal detection function
+
 To fit a point transect detection function, the argument `transect="point"` needs to be specified:
 
 ```{r, echo=T, eval=F}
-# Fit half-normal point transect detection function, 
 ptdat.hn <- ds(data=PTExercise, transect="point", key="hn", 
                convert.units=conversion.factor)
 ```
@@ -53,16 +50,18 @@ The `convert.units` argument gives the estimated density in animals per hectare.
 The detection function can be plotted as for line transects:
 
 ```{r, eval=F}
-# Plot detection function
 plot(ptdat.hn)
 ```
+
+## probability density function
 
 To plot the probability density function (pdf), an additional argument is required in the `plot` function:
 
 ```{r, eval=F}
-# Plot probability density function
 plot(ptdat.hn, pdf=TRUE)
 ```
+
+# Fit other key functions and examine truncation
 
 Experiment with keys other than the half normal (i.e. hazard rate and uniform) to assess whether these data can be satisfactorily analysed using the wrong model: 
 
@@ -75,7 +74,7 @@ How do the bias and precision compare between models?
 
 A point transect survey of songbirds was conducted at Montrave, Fife, Scotland, in 2004 (Buckland 2006) and for this exercise, the data on winter wrens is used. Several different methods of data collection were used and for this exercise, two point transect methods are used:
 
-1. standard five-minute counts,
+1. standard five-minute counts and
 2. the 'snapshot' method.
 
 For each method the same 32 point transects were used in 33.2 ha of parkland (Figure 1) and each point transect was visited twice. Detection distances (recorded in metres) were measured with the aid of a rangefinder.
@@ -99,6 +98,8 @@ head(wren_5min, n=3)
 ```
 
 Note the `Effort` field is `2` meaning each point transect was visited twice.  The same applies for `wren_snapshot`.
+
+## Analyse both conventional and snapshot data sets
 
 What to do:
 

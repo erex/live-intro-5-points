@@ -1612,7 +1612,7 @@ $(document).ready(function () {
       <li><a href="#simulated-survey-data">Simulated survey data</a></li>
       <li><a href="#fit-and-plot-half-normal-detection-function">Fit and plot half normal detection function</a>
       <ul>
-      <li><a href="#probability-density-function">probability density function</a></li>
+      <li><a href="#probability-density-function">Probability density function</a></li>
       </ul></li>
       <li><a href="#fit-other-key-functions-and-examine-truncation">Fit other key functions and examine truncation</a></li>
       <li><a href="#wren-data-optional">Wren data (Optional)</a>
@@ -1625,7 +1625,7 @@ $(document).ready(function () {
     
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
               <p class="author"><span class="glyphicon glyphicon-user"></span> Centre for Research into Ecological and Environmental Modelling <br> <strong>University of St Andrews</strong></p>
-                  <p class="date"><span class="glyphicon glyphicon-calendar"></span> Exercise 5. Point transect sampling <br> September 2020</p>
+                  <p class="date"><span class="glyphicon glyphicon-calendar"></span> Exercise 5. Point transect sampling <br> November 2020</p>
         </div>
 </div>
 
@@ -1657,11 +1657,11 @@ $(document).ready(function () {
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>ptdat.hn &lt;-<span class="st"> </span><span class="kw">ds</span>(<span class="dt">data=</span>PTExercise, <span class="dt">transect=</span><span class="st">&quot;point&quot;</span>, <span class="dt">key=</span><span class="st">&quot;hn&quot;</span>, </span>
 <span id="cb2-2"><a href="#cb2-2"></a>               <span class="dt">convert.units=</span>conversion.factor)</span></code></pre></div>
 <p>The <code>convert.units</code> argument gives the estimated density in animals per hectare.</p>
-<p>The detection function can be plotted as for line transects:</p>
+<p>The detection function can be plotted as for line transects using the <code>plot()</code> function</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">plot</span>(ptdat.hn)</span></code></pre></div>
 <div id="probability-density-function" class="section level2">
-<h2>probability density function</h2>
-<p>To plot the probability density function (pdf), an additional argument is required in the <code>plot</code> function:</p>
+<h2>Probability density function</h2>
+<p>To plot the more informative probability density function (pdf), an additional argument is required in the <code>plot()</code> function:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">plot</span>(ptdat.hn, <span class="dt">pdf=</span><span class="ot">TRUE</span>)</span></code></pre></div>
 </div>
 </div>
@@ -1676,7 +1676,7 @@ $(document).ready(function () {
 </div>
 <div id="wren-data-optional" class="section level1">
 <h1>Wren data (Optional)</h1>
-<p>A point transect survey of songbirds was conducted at Montrave, Fife, Scotland, in 2004 (Buckland 2006) and for this exercise, the data on winter wrens is used. Several different methods of data collection were used and for this exercise, two point transect methods are used:</p>
+<p>A point transect survey of songbirds was conducted at Montrave, Fife, Scotland, in 2004 <span class="citation">(Buckland, 2006)</span> and for this exercise, the data on winter wrens is used. Several different methods of data collection were used and for this exercise, two point transect methods are used:</p>
 <ol style="list-style-type: decimal">
 <li>standard five-minute counts and</li>
 <li>the ‘snapshot’ method.</li>
@@ -1705,9 +1705,13 @@ The study site: the dotted line is a small stream, the short dashed lines are tr
 </ol>
 </div>
 </div>
-<div id="references" class="section level1">
-<h1>References</h1>
-<p>Buckland, ST 2006. Point-transect surveys for songbirds: robust methodologies. The Auk 123: 345–57. <a href="https://doi.org/10.1642/0004-8038(2006)123%5B345:PSFSRM%5D2.0.CO;2" class="uri">https://doi.org/10.1642/0004-8038(2006)123[345:PSFSRM]2.0.CO;2</a>.</p>
+<div id="references" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references hanging-indent">
+<div id="ref-buckland2006">
+<p>Buckland, S. (2006). Point-transect surveys for songbirds: Robust methodologies. <em>The Auk</em>, <em>123</em>(2), 345–357. <a href="https://doi.org/10.1642/0004-8038(2006)123%5B345:PSFSRM%5D2.0.CO;2">https://doi.org/10.1642/0004-8038(2006)123[345:PSFSRM]2.0.CO;2</a></p>
+</div>
+</div>
 </div>
 </div>
 

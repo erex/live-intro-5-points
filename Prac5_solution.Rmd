@@ -1,23 +1,25 @@
 ---
 title: Introduction to distance sampling
 author: Centre for Research into Ecological and Environmental Modelling <br> **University of St Andrews**
-date: Exercise 5. Point transect sampling <br> September 2020
+date: Exercise 5. Point transect sampling <br> November 2020
 output: 
   rmdformats::readthedown:
     highlight: tango
+bibliography: references.bib
+csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-<div class="alert  alert-success">
-  <strong>Solutions</strong> Point transect exercises
-</div>
+::: {.alert .alert-success}
+<strong>Solutions</strong> Point transect exercises
+:::
 
 # Simulated data
 
-The code for importing and checking these data and fitting various models is shown below. 
+The code for accessing and checking these data and fitting various models is shown below.
 
 ```{r, fig.width=4, fig.height=4, message=FALSE}
 library(Distance)
@@ -42,7 +44,6 @@ PTExercise.hr.t20m <- ds(data=PTExercise, transect="point", key="hr", truncation
 PTExercise.uf.cos.t20m <- ds(data=PTExercise, transect="point", key="unif", 
                         adjustment="cos", truncation=20,convert.units=conversion.factor)
 ```
-
 
 ```{r, echo=F}
 # Same caveat as with previous exercises, do not get excited
@@ -90,7 +91,7 @@ We see a fair degree of variability between analyses - reliable analysis of poin
 
 # Wren data (Optional)
 
-In the code provided below, each data set is loaded and detection functions selected by Prof Buckland in his paper are fitted. 
+In the code provided below, each data set is loaded and detection functions selected in Buckland [-@buckland2006] are fitted.
 
 ```{r, echo=T, eval=T}
 data("wren_5min")
@@ -128,4 +129,6 @@ plot(wren5min.uf.cos.t110, main="5 minute count")
 plot(wrensnap.hr.cos.t110, main="Snapshot moment")
 ```
 
-As the detection distance histograms indicate, winter wren showed evidence of observer avoidance, more than other species in the Montrave study.  We show the detection function graph rather than the PDF to emphasise the evasive movement aspect of the data.  If you conduct the goodness of fit test, using `gof_ds()`, you will find that the models still suitably fit the data.
+As the detection distance histograms indicate, winter wren showed evidence of observer avoidance, more than other species in the Montrave study. We show the detection function graph rather than the PDF to emphasise the evasive movement aspect of the data. If you conduct the goodness of fit test, using `gof_ds()`, you will find that the models still suitably fit the data.
+
+# References

@@ -8,20 +8,20 @@ data("PTExercise")
 head(PTExercise, n=3)
 conversion.factor <- convert_units("meter", NULL, "hectare")
 # Fit half-normal detection function, no truncation
-PTExercise.hn <- ds(data=PTExercise, transect="point", key="hn", convert.units=conversion.factor)
+PTExercise.hn <- ds(data=PTExercise, transect="point", key="hn", convert_units=conversion.factor)
 plot(PTExercise.hn, pdf=TRUE, main="Simulated pt transect data\nHalf normal key function")
 
 
 ## ---- trunc20, message=FALSE-----------------------------------------------------------
 # Half normal, no adjustments
 PTExercise.hn.t20m <- ds(data=PTExercise, transect="point", key="hn", truncation=20,
-                    convert.units=conversion.factor)
+                    convert_units=conversion.factor)
 # Hazard rate, no adjustments
 PTExercise.hr.t20m <- ds(data=PTExercise, transect="point", key="hr", truncation=20,
-                    convert.units=conversion.factor)
+                    convert_units=conversion.factor)
 # Uniform, cosine adjustments
 PTExercise.uf.cos.t20m <- ds(data=PTExercise, transect="point", key="unif", 
-                        adjustment="cos", truncation=20,convert.units=conversion.factor)
+                        adjustment="cos", truncation=20,convert_units=conversion.factor)
 
 
 ## ---- echo=F---------------------------------------------------------------------------
@@ -70,10 +70,10 @@ data("wren_snapshot")
 conversion.factor <- convert_units("meter", NULL, "hectare")
 wren5min.uf.cos.t110 <- ds(data=wren_5min, key="unif", adjustment="cos", 
                         transect="point", truncation=110, 
-                        convert.units=conversion.factor)
+                        convert_units=conversion.factor)
 wrensnap.hr.cos.t110 <- ds(data=wren_snapshot, key="hr", adjustment=NULL, 
                         transect="point", truncation=110, 
-                        convert.units=conversion.factor)
+                        convert_units=conversion.factor)
 
 
 ## ---- echo=F---------------------------------------------------------------------------

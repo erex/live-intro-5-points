@@ -1,7 +1,7 @@
 ---
 title: Exercise 5<br> Point transect sampling
 author: Centre for Research into Ecological and Environmental Modelling <br> **University of St Andrews**
-date: Introduction to distance sampling<br> January 2022
+date: Introduction to distance sampling<br> April 2022
 output: 
   rmdformats::readthedown:
     highlight: tango
@@ -44,10 +44,10 @@ To fit a point transect detection function, the argument `transect="point"` need
 
 ```{r, echo=T, eval=F}
 ptdat.hn <- ds(data=PTExercise, transect="point", key="hn", 
-               convert.units=conversion.factor)
+               convert_units=conversion.factor)
 ```
 
-The `convert.units` argument gives the estimated density in animals per hectare.
+The `convert_units` argument gives the estimated density in animals per hectare.
 
 The detection function can be plotted as for line transects using the `plot()` function
 

@@ -1,0 +1,87 @@
+
+```{r 'check_ps', include=FALSE}
+
+user.name = ''
+```
+
+
+<img src=https://images.unsplash.com/photo-1606501427419-0fcf7d0c8013?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80 width=350 height=200 style="float:right">
+
+## Exercise 5 -- Point transect analysis
+
+This data set was simulated so we know both the true population density and the true underlying detection function.  We remain interested in the robustness of density estimates across the range of key function models. Examine the largest and smallest density estimates to discover the ranges of density estimates.
+
+```{r eval=FALSE}
+# Run for additional info in the Viewer pane
+info("preknit_fEOANoItCmOF")
+```
+
+This data set was simulated so we know both the true population density and the true underlying detection function.
+
+#### Answer these questions by looking at the above table
+
+a) Repeat the calculations that you made at the conclusion of Exercise 3; this time looking at the relative difference between the most extreme density estimates for this data set (remember true density is 79.8 per km^2, just as it was for the simulated line transect data).  Use the three key functions (uniform with cosine adjustment, half normal and hazard rate) with a 20m truncation distance suggested in the exercise.
+
+Determine the magnitude (in percent) of the range in density estimates produced by these three models fitted to the simulated data.  Reflect on the magnitude of this range vis-a-vis the range in estimates among models for the line transect data set.
+
+```{r "1_a"}
+dhat.haz <- ___
+dhat.unif <- ___
+d.diff <- ___ - ___
+rel.diff <- d.diff / ___
+print(rel.diff)
+```
+
+
+
+Quiz: What was the relative percentage difference between the smallest and largest density estimate for these simulated data?
+
+[1]: 1%
+[2]: 3%
+[3]: 5%
+[4]: 20%
+
+```{r eval=FALSE}
+# Run line to answer the quiz above
+answer.quiz("diffmag")
+```
+
+### Wren data from Buckland Montrave study
+
+b) The analysis you were asked to do for these data sets was not as exhaustive as the previous analysis.  There is not a suite of models fitted to the two data sets; only a single model for each type of point transect.  The model selection was carried out in Buckland (2006).  Emphasis here is upon recognising differences in estimated density arising from the two methods of data collection.
+
+```{r eval=FALSE}
+# Run for additional info in the Viewer pane
+info("preknit_IyGzkEgZPqnt")
+```
+
+
+Quiz: How much larger (percent) is 5-minute density estimate than snapshot density estimate? (to the nearest 5 percent)
+
+Answer: 
+
+```{r eval=FALSE}
+# Run line to answer the quiz above
+answer.quiz("wren1")
+```
+
+
+Quiz: Which data collection method produces the more precise estimate (by a considerable amount)?
+
+Answer: 
+
+```{r eval=FALSE}
+# Run line to answer the quiz above
+answer.quiz("wren2")
+```
+
+
+Quiz: There is evidence of evasive movement if you look at the distribution of radial distances.  Was this evasive movement sufficient to make inference suspect for either the 5-minute or snapshot data?
+
+[1]: yes
+[2]: no
+
+```{r eval=FALSE}
+# Run line to answer the quiz above
+answer.quiz("wren3")
+```

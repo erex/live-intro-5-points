@@ -1,7 +1,7 @@
 #< ignore
 
 ```{r start}
-setwd("C:/Users/erexs/Documents/RTutor/introwkshp")
+setwd("C:/Users/erexs/Documents/GitHub/live-intro-5-points")
 library(kableExtra)
 library(RTutor)
 libs <- c("Distance")
@@ -26,13 +26,13 @@ data("PTExercise")
 conversion.factor <- convert_units("meter", NULL, "hectare")
 PTExercise.hn.t20m <- ds(data=PTExercise, transect="point", 
                          key="hn", truncation=20, 
-                         convert.units=conversion.factor)
+                         convert_units=conversion.factor)
 PTExercise.hr.t20m <- ds(data=PTExercise, transect="point", 
                          key="hr", truncation=20, 
-                         convert.units=conversion.factor)
+                         convert_units=conversion.factor)
 PTExercise.uf.cos.t20m <- ds(data=PTExercise, transect="point", 
                              key="unif", adjustment="cos", 
-                             trunc=20,convert.units=conversion.factor)
+                             trunc=20,convert_units=conversion.factor)
 hn <- summary(PTExercise.hn.t20m)$dht$individuals$D[c(2,4)]
 hr <- summary(PTExercise.hr.t20m)$dht$individuals$D[c(2,4)]
 unif <- summary(PTExercise.uf.cos.t20m)$dht$individuals$D[c(2,4)]
@@ -94,10 +94,10 @@ data("wren_snapshot")
 conversion.factor <- convert_units("meter", NULL, "hectare")
 wren5min.uf.cos.t110 <- ds(data=wren_5min, key="unif", adjustment="cos", 
                         transect="point", truncation=110, 
-                        convert.units=conversion.factor)
+                        convert_units=conversion.factor)
 wrensnap.hr.t110 <- ds(data=wren_snapshot, key="hr", adjustment=NULL, 
                         transect="point", truncation=110, 
-                        convert.units=conversion.factor)
+                        convert_units=conversion.factor)
 snap <- summary(wrensnap.hr.t110)$dht$individuals$D[c(2,4)]
 min5 <- summary(wren5min.uf.cos.t110)$dht$individuals$D[c(2,4)]
 part <- (rbind(snap, min5))
